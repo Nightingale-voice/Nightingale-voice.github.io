@@ -1,0 +1,534 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightingale || </title>
+    <meta name="author" content="Nightingale">
+    <meta name="description" content="Nightingale的blog~ ">
+    <meta name="keywords" content=" ">
+    <link rel="icon" href="/images/avatar.png">
+    <link rel="stylesheet" href="/css/antd.min.css">
+    
+    <link rel="stylesheet" href="/css/maiden-theme.css">
+    
+    <script src="/js/vue.js"></script>
+    <script src="/js/antd.min.js"></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+    <div id="loading"
+        style="height: 100vh; width: 100%; position: fixed;display: flex;z-index: 200; justify-content: space-between;">
+        <div id="loadleft" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div id="loadright" style="width: 50%;background-color: #ffffff;transition: width 0.6s ease-out;"></div>
+        <div
+            style="position: fixed; height: 100vh; width: 100%;display: flex;justify-content: center;align-items: center;">
+            <div id="loadcontent"
+                style="width:400px;height:400px;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px#a3ddfb; text-align:center;opacity:1;transition:opacity 0.3s ease-out;">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p>加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img src="/dancingkitty.gif" alt="loading">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="layout">
+        <transition name="into">
+            <div v-show="show_page" style="display: none;">
+                <div id="menu_show">
+                     
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Nightingale</span>
+        </a>
+        
+        <a href="/">
+            <span>
+                <a-icon type="home" theme="filled" />
+            </span>
+            <span>home</span>
+        </a>
+        
+        <a href="/about">
+            <span>
+                <a-icon type="idcard" theme="filled" />
+            </span>
+            <span>about</span>
+        </a>
+        
+        <a href="/archives">
+            <span>
+                <a-icon type="folder" theme="filled" />
+            </span>
+            <span>archives</span>
+        </a>
+        
+        <a href="/like/categories">
+            <span>
+                <a-icon type="book" theme="filled" />
+            </span>
+            <span>categories</span>
+        </a>
+        
+        <a href="/like/tags">
+            <span>
+                <a-icon type="tags" theme="filled" />
+            </span>
+            <span>tags</span>
+        </a>
+        
+        <a target="_blank" rel="noopener" href="https://en.korilin.com">
+            <span>
+                <a-icon type="compass" theme="filled" />
+            </span>
+            <span>英文博客</span>
+        </a>
+        
+    </div>
+
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div :class="'title'" @click="menu_show=!menu_show">
+            <span style="margin-right: 10px;">
+                <a-icon type="appstore" theme="filled" />
+            </span>
+            <span>Nightingale</span>
+        </div>
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="home" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">home</div>
+                </div>
+            </a>
+            
+            <a href="/about">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="idcard" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">about</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="folder" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/like/categories">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="book" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">categories</div>
+                </div>
+            </a>
+            
+            <a href="/like/tags">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="tags" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">tags</div>
+                </div>
+            </a>
+            
+            <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="compass" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">英文博客</div>
+                </div>
+            </a>
+            
+        </div>
+        <div class="curtain" v-show="menu_show"></div>
+    </div>
+
+</nav>
+                </div>
+
+                <div id="main">
+                    <div id="home-head" style=background-image:url('home.jpg')>
+    <script>
+        var menu = document.getElementById("menu")
+        menu.className += " menu-color"
+    </script>
+     
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>Nightingale</h1>
+                <h3></h3>
+                <h5>Nightingale的blog~</h5>
+            </div>
+        </span>
+    </div>
+     
+</div>
+
+
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+
+        <div id="posts">
+            
+
+<div class="post">
+
+    <a href="/2021/12/01/hello-world/">
+        <h2>
+            Hello World
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2021/12/1
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        
+    </div>
+
+    <a href="/2021/12/01/hello-world/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+
+    <a href="/2018/09/10/异常处理/">
+        <h2>
+            tags
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        
+
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2018/9/10
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            
+            <h1 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h1><p>在程序运行过程中，经常会出现一些意外的情况，这些意外会导致程序出错或者崩溃，从而影响程序的正常执行，如果不能很好地处理这些意外情况，程序的稳定性就会受到影响。在 Java 语言中，将这些程序意外称为异常（<code>Exception</code>），出现异常时的处理称为异常处理，合理的异常处理可以使整个项目更加稳定，也可以分离程序中的正常逻辑代码和异常处理逻辑代码，便于代码的阅读和维护。</p>
+<h2 id="异常种类"><a href="#异常种类" class="headerlink" title="异常种类"></a>异常种类</h2><p><img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20211122190636235.png" alt="image-20211122190636235"></p>
+<ul>
+<li><p><code>Throwable</code>：异常的基类，所有异常都继承自 <code>java.lang.Throwable</code> 类，<code>Throwable</code> 类有两个直接子类：<code>Error</code> 类和 <code>Exception</code> 类。</p>
+</li>
+<li><p><code>Error</code>：是 Java 应用程序本身无法恢复的严重错误，应用程序不需要捕获、处理这些严重错误。通常情况下，程序员无需处理此类异常。</p>
+</li>
+<li><p><code>Exception</code>：由 Java 应用程序抛出和处理的非严重错误（即异常），也是我们本章重点学习的对象。异常可分为运行时异常（<code>RuntimeException</code>）和检查时异常（<code>CheckedException</code>）两种。</p>
+</li>
+<li><p><code>RuntimeException</code>：运行时异常，即程序运行时抛出的异常，程序员在编程时即使不做任何处理，程序也能通过编译。前面数组下标越界异常和除数为 0 的异常都是运行时异常。</p>
+</li>
+<li><p><code>CheckedException</code>：检查时异常，又称为非运行时异常，这样的异常要求程序员必须在编程时进行处理，否则就会编译不通过。需要特别注意的是，在 JDK 的异常定义体系中（即在所有 <code>Throwable</code> 的子类中），并不存在真正的 <code>CheckedException</code> 类。也就是说，上图中的所有类名，都能在 JDK 中找到对应的 API，但唯独 <code>CheckedException</code> 类并不是真实存在的。一般而言，如果一个类继承自 <code>RuntimeException</code>，就称此类为运行时异常；反之，如果一个类没有继承 <code>RuntimeException</code>，但继承了 <code>Exception</code> 或 <code>Throwable</code>，就称此类为检查时异常。</p>
+</li>
+</ul>
+<h2 id="try-catch语句"><a href="#try-catch语句" class="headerlink" title="try catch语句"></a>try catch语句</h2><h3 id="try-catch"><a href="#try-catch" class="headerlink" title="try catch"></a>try catch</h3><ol>
+<li>捕获异常并处理：先在一段可能抛出异常的代码外，用 <code>try&#123;...&#125;catch&#123;...&#125;</code> 结构包裹起来。如果运行时发生了异常，那么此次异常就会进入 <code>catch&#123;...&#125;</code> 代码块；如果一直没有异常发生，程序就不会进入 <code>catch&#123;...&#125;</code> 代码块。并且 <code>catch&#123;...&#125;</code> 可以针对抛出的不同类型的异常捕获后进行分类处理。</li>
+<li>抛出异常：通过 <code>throws</code> 关键字，将异常抛给上一级处理。</li>
+</ol>
+<p>  try {    //可能抛出异常的语句块 }</p>
+<p>  catch(SomeException1 e) {    // SomeException1 特指某些异常，非 Java 中具体异常，下同    //当捕获到 SomeException1 类型的异常时执行的语句块 }</p>
+<p>   catch(SomeException2 e) {    //当捕获到 SomeException2 类型的异常时执行的语句块 }</p>
+<p>   finally {    //无论是否发生异常都会执行的代码 }</p>
+<p>  <strong>所有的catch结构都是平行结构，类似于switch语句中的case：结构，只要符合条件，无论catch在哪一级都会触发并执行相关语句</strong>所以会出现</p>
+<h3 id="finally-语句"><a href="#finally-语句" class="headerlink" title="finally 语句"></a><code>finally</code> 语句</h3><p>  使用 <code>finally</code> 语句块，保证了不论 <code>try</code> 语句块中是否出现异常，<code>finally</code> 语句块中的代码都会被执行</p>
+<p>  也许有人会有这样的疑问，如果在 <code>try</code> 语句块中或者 <code>catch</code> 语句块中存在 return 语句，<code>finally</code> 语句块中的代码还会执行吗？不是说 return 语句的作用是将结果返回给调用者，而不再执行 return 语句后面的代码吗？Java 异常处理机制对这个问题的处理是，当 <code>try</code> 或 <code>catch</code> 语句块中有 return 语句时，先执行 <code>try</code> 或 <code>catch</code> 语句块中 return 语句之前的代码，再执行 <code>finally</code> 语句块中的代码，之后再返回。所以，即使在 <code>try</code> 或 <code>catch</code> 语句块中有 return 语句，<code>finally</code> 语句块中的代码仍然会被执行。</p>
+<p>  在异常处理结构中，<code>finally</code> 语句块<strong>不执行的唯一一种情况</strong>就是如果在 <code>catch</code> 语句中出现 <code>System.exit()</code>，该方法表示关闭 JVM。</p>
+<h3 id="样例分析"><a href="#样例分析" class="headerlink" title="样例分析"></a>样例分析</h3><p><img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20211123194821552.png" alt="image-20211123194821552"></p>
+<p><code>java.lang.ArrayIndexOutOfBoundsException：3</code> 表示此次发生的异常类型是 <code>ArrayIndexOutOfBoundsException</code> ，并且是在数组下标为“3”时触发的此次异常；而 <code>at TestEx12.main(TestEx12.java 8)</code> 表示此次发生异常的代码是在 <code>TestEx12</code> 类中的 <code>main()</code> 方法里（<code>TestEx12.java</code> 文件中的第 8 行）。</p>
+<h2 id="常见异常"><a href="#常见异常" class="headerlink" title="常见异常"></a>常见异常</h2><ul>
+<li><p><code>NullPointerException</code>：空指针异常（程序员经常会遇到）属于运行时异常。解释为程序遇到了空指针，简单地说，就是调用了未经初始化的对象或者不存在的对象，或是访问或修改 null 对象的属性或方法。比如说，对数组操作时出现空指针，很多情况下是程序员把数组的初始化和数组元素的初始化混淆了，如果在数组元素还没有初始化的情况下调用了该数组元素，则会抛出空指针异常。</p>
+</li>
+<li><p><code>ClassNotFoundException</code>：见名知义，该异常为类没能找到的异常。出现这种情况一般有三种原因：一是的确不存在该类；二是开发环境进行了调整，例如类的目录结构发生了变化，编译、运行路径发生了变化等；三是在修改类名时，没有修改调用该类的其他类，导致类找不到的情况。</p>
+</li>
+<li><p><code>IllegalArgumentException</code>：抛出该异常表明向方法传递了一个不合法或不正确的参数。</p>
+</li>
+<li><p><code>InputMismatchException</code>：由 <code>Scanner</code> 抛出，表明 <code>Scanner</code> 获取的内容与期望类型的模式不匹配，或者该内容超出期望类型的范围。例如需要输入的是能转换为 <code>int</code> 型的字符串，结果却输入了 abc，则会抛出这个异常。</p>
+</li>
+<li><p><code>IllegalAccessException</code>：当应用程序试图创建一个实例、设置或获取一个属性，或者调用一个方法，但当前正在执行的方法无法访问指定类、属性、方法或构造方法的定义时，抛出 <code>IllegalAccessException</code>。</p>
+</li>
+<li><p><code>ClassCastException</code>：当试图将对象强制转换为不是实例的子类时，抛出该异常。</p>
+</li>
+<li><p><code>SQLException</code>：提供关于数据库访问错误或其他错误信息的异常。</p>
+</li>
+<li><p><code>IOException</code>：当发生某种 I/O 异常时，抛出此异常。此类是失败或中断的 I/O 操作生成的异常的通用类。</p>
+</li>
+</ul>
+<h2 id="throws抛出异常"><a href="#throws抛出异常" class="headerlink" title="throws抛出异常"></a>throws抛出异常</h2><p><strong><code>throws</code> 用于声明一个方法会抛出异常，就是当方法本身不知道或者不愿意处理某个可能抛出的异常时，可以选择用 <code>throws</code> 关键字将该异常提交给调用该方法的方法进行处理</strong>。声明方法抛出异常很简单，只需要在方法的参数列表之后，在方法体的大括号前，增加 <code>throws</code> 异常列”即可。</p>
+<p>throws抛出的异常全部都是抛给了上一级，main最后可以抛给JVM虚拟机，<strong>同时如果类似于A抛出给B，B有抛出给C时，B类中抛出的异常必须包括A中抛出的异常</strong>，当然B中抛出的异常范围也可以比A中的大，例如抛出一个exception。</p>
+<h3 id="实用范例"><a href="#实用范例" class="headerlink" title="实用范例"></a>实用范例</h3><p><img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20211123201611875.png" alt="image-20211123201611875"></p>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><p>顾名思义，就是程序员自己定义的异常。当 Java 类库中的异常不能满足程序需求时，程序员可以自己定义并使用异常。下面结合一个实际的例子，介绍如何定义并使用自定义异常。</p>
+<p>语法上，自定义异常可以任意的继承一个异常类。但 <strong><code>Exception</code> 类是 Java 中所有异常类的父类</strong>，<strong>所以在定义自定义异常类时，通常继承自该类。</strong></p>
+<p><img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20211123201733022.png" alt="image-20211123201733022"></p>
+<p><img src="C:\Users\86181\AppData\Roaming\Typora\typora-user-images\image-20211124203700298.png" alt="image-20211124203700298"></p>
+<p><strong>message就是输出异常信息的作用，获取父类exception的相关异常信息。</strong></p>
+<h3 id="throw"><a href="#throw" class="headerlink" title="throw"></a>throw</h3><p>throw与throws并不相同，throw一般会与自定义异常一起使用，用于声明自定义异常，但重点是，<strong>使用了throw之后，必须使用try catch或者throws抛出异常（你都假设异常了，总得象征性处理一下吧）</strong></p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>本章讲解的是异常处理机制，用于处理程序中可能发生的异常，主要涉及了以下知识点：</p>
+<ol>
+<li>异常处理机制可以将程序中的业务代码和异常代码相分离，从而使得开发者们可以更加专注于编写业务代码，并使程序更加优雅。</li>
+<li>异常的继承结构：异常的顶层基类是 <code>Throwable</code>；继承自 <code>RuntimeException</code> 的类称为运行时异常，否则称为检查异常。</li>
+<li>运行时异常在编译阶段没有提示，只是在运行时存在异常才抛出；而检查异常是会在编译时就提示开发者必须处理的异常。</li>
+<li>在异常可能发生的地方，通常有两种预防性处理策略：如果开发者认为此时出现的异常最好立即进行处理，那么就可以采用 <code>try...catch</code> 的方式；反之，如果开发者认为此时出现的异常，暂时可以不进行处理，就可以通过 <code>throws</code> 将异常抛出给上一级去处理。</li>
+<li>异常对象常用方法有两个：一个方法是 <code>printStackTrace()</code>，用于输出异常的堆栈信息；另一个方法是 <code>getMessage()</code>，用于返回异常详细信息字符串。</li>
+<li>异常的 5 个关键字：<code>try</code> 中编写可能存在异常的代码，<code>catch</code> 用于捕获异常并书写异常处理代码，<code>finally</code> 中的代码无论是否出现异常都会被执行（此前有 <code>System.exit()</code>除外），<code>throws</code> 用于声明方法可能会抛出的异常，而 <code>throw</code> 表示手工抛出异常即制造异常并抛出。</li>
+<li>自定义异常：如果 JDK 中已有的异常不能满足开发需求，就需要开发者自定义异常。自定义异常需要继承 JDK 中已有的异常，并且通常会结合 <code>if</code> 语句一起使用。</li>
+<li>常见的异常类型有 <code>NullPointerException</code>、<code>ClassNotFoundException</code>、<code>IllegalArgumentException</code>、<code>InputMismatchException</code>、<code>IllegalAccessException</code>、<code>ClassCastException</code>、<code>SQLException</code> 和 <code>IOException</code> 等，并且随着学习的深入，大家也会接触更多类型的异常。</li>
+</ol>
+<p><img src="https://doc.shiyanlou.com/courses/3232/1533757/6a157196929fd350a385f0fd20a17dbf-0" alt="img"></p>
+
+            
+        </div>
+    </div>
+
+    <div class="post-tags">
+        
+        <span class="icon">
+            <a-icon type="tags" theme="filled" />
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/Typora" style=color:#1bccbc>
+                Typora
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/Markdown" style=color:#ff7d73>
+                Markdown
+            </a>
+        </span>
+        
+    </div>
+
+    <a href="/2018/09/10/异常处理/ " class="go-post">
+        阅读全文
+    </a>
+</div>
+
+
+             
+<div class="page-current">
+
+    <div class="prev">
+        
+    </div>
+
+    <div class="page-index">
+
+        
+
+        <span class="current">
+            1
+        </span>
+
+        
+
+    </div>
+
+    <div class="next">
+        
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <a-affix :offset-top="card_top">
+    <a-card class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="images/avatar.png " alt="头像">
+        </div>
+        <div class="name">
+            Nightingale
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                正しさなんてもの
+            </div>
+            
+            <div class="description">
+                人のモノサシによって変わる
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/korilin">
+
+                    
+                    <a-icon type="github"
+                        theme="filled" />
+                    
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://twitter.com/korilin_dev">
+
+                    
+                    <a-icon type="twitter"
+                        theme="" />
+                    
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://en.korilin.com">
+                    英文技术博客
+                </a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://jp.korilin.com">
+                    日语记录博客
+                </a>
+            </div>
+            
+        </div>
+    </a-card>
+</a-affix>
+    </div>
+    
+</div>
+                     
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2018 - 2021 Nightingale
+            <span class="footer-icon">
+                <a-icon type="flag" theme="filled" /></span>
+            @Nightingale
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+
+</footer>
+
+<script src="/js/highlight.min.js"></script>
+<script src="/js/particle.js"></script>
+                </div>
+            </div>
+        </transition>
+    </div>
+
+    <script>
+    new Vue({
+        el: "#layout",
+        data: {
+            show_page: false,
+            onload_menu: false,
+            menu_show: false,
+            card_top: 100
+        },
+        created: function () {
+            var that = this
+            window.onload = function () {
+                that.show_page = true
+                document.getElementById("loadcontent").style.opacity = 0
+                setTimeout(function () {
+                    document.getElementById("loadleft").style.width = 0
+                    document.getElementById("loadright").style.width = 0
+                }, 300)
+                setTimeout(function () {
+                    document.getElementById("loading").style = "display:none"
+                }, 600)
+            }
+        },
+        mounted: function () {
+            var that = this
+            window.addEventListener('scroll', function (e) {
+                that.menu_show = false
+            })
+        },
+        methods: {
+            home_click: function () {
+                window.scrollTo({
+                    top: window.innerHeight - 80,
+                    behavior: "smooth",
+                });
+            }
+        }
+    })
+</script>
+
+</body>
+
+</html>

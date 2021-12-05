@@ -4,10 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="狂神笔记——初入Java世界, Nightingale">
-    <meta name="description" content="狂神笔记——初入Java世界注释代码的作用平时我们编写代码，在代码量比较少的时候，我们还可以看懂自己写的，但是当项目结构一旦复杂起来，我们就需要用到注释了。
-注释有助于我们理解代码的用意，有助于我们快速读懂代码。
-注释并不会被执行，是给我们">
+    <meta name="keywords" content="IDEA安装, Nightingale">
+    <meta name="description" content="if选择语句if选择语句介绍if选择语句是最简单的选择语句，是一切基于代码进行逻辑运算的基础，if语句可以在在有限的语句中选择出符合输入数据条件的相关结果，可以快速指引输入数据到达应该到达的技术区域。
+在之后的学习生活中，if语句的出现频率">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>狂神笔记——初入Java世界 | Nightingale</title>
+    <title>IDEA安装 | Nightingale</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -313,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">狂神笔记——初入Java世界</h1>
+                    <h1 class="description center-align post-title">IDEA安装</h1>
                 </div>
             </div>
         </div>
@@ -487,75 +486,126 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="狂神笔记——初入Java世界"><a href="#狂神笔记——初入Java世界" class="headerlink" title="狂神笔记——初入Java世界"></a>狂神笔记——初入Java世界</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="代码的作用"><a href="#代码的作用" class="headerlink" title="代码的作用"></a>代码的作用</h3><p>平时我们编写代码，在代码量比较少的时候，我们还可以看懂自己写的，但是当项目结构一旦复杂起来，我们就需要用到注释了。</p>
-<p>注释有助于我们理解代码的用意，有助于我们快速读懂代码。</p>
-<p>注释并不会被执行，是给我们写代码的人看的。</p>
-<p><strong>书写注释是一个非常好的习惯</strong>。（在大公司的应聘中，会用较为规范的行为要求来约束员工，而记得打注释就是最基本的一个程序员的工作素养，<strong>在很多时候在团队协作中具有极其重要的作用</strong>）</p>
-<h3 id="Java中的注释有三种"><a href="#Java中的注释有三种" class="headerlink" title="Java中的注释有三种:"></a>Java中的注释有三种:</h3><p>单行注释（在注释之前写上“//”即可使用，只不过只对单行文字有用，使用较为快捷与方便）</p>
-<p>多行注释（/*  ——*/的方式来注释在两个符号之间的所有文字，可对于多行文字起作用）</p>
-<p>文档注释（在doc文档中会详细进行相关的解释）、</p>
-<h3 id="注意：平时写代码一定要做到随时留注释，随时看注释的好习惯"><a href="#注意：平时写代码一定要做到随时留注释，随时看注释的好习惯" class="headerlink" title="注意：平时写代码一定要做到随时留注释，随时看注释的好习惯"></a><strong>注意：平时写代码一定要做到随时留注释，随时看注释的好习惯</strong></h3><hr>
-<h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h2><h3 id="关键字（标识符一定不能用到这些关键字）"><a href="#关键字（标识符一定不能用到这些关键字）" class="headerlink" title="关键字（标识符一定不能用到这些关键字）"></a>关键字（标识符一定不能用到这些关键字）</h3><p><img src="C:\Users\86181\Desktop\专业学习资料即作业\java学习\java图片\数据类型\image-20210318200720120.png" alt="image-20210318200720120"></p>
-<hr>
-<h2 id="标识符如何使用"><a href="#标识符如何使用" class="headerlink" title="标识符如何使用"></a>标识符如何使用</h2><p>标识符多种多样，它们相当于在Java程序中发挥某些作用的变量的名字，但很显然，就像人类的名字必须传自家谱，又或者必须与历史上的某些伟人避讳，这些标识符自然也会有相关的“取名规则”：</p>
-<pre class="line-numbers language-none"><code class="language-none">//所有的标识符都只能用“A-Z”“a—z”“$“”_“四种类型作为开头字母，否则会报错
-//首字母之后可以是任意字母，任何组合，甚至可以是阿拉伯数字
-//但是类似于”#“之类的具有特殊意义的符号无论作为首字母还是后续字母都会进行报错，需要注意
-//不能使用关键字作为变量名或者是方法名，比如”class“"double""static"
-//标识符是大小写敏感的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <h1 id="if选择语句"><a href="#if选择语句" class="headerlink" title="if选择语句"></a>if选择语句</h1><h2 id="if选择语句介绍"><a href="#if选择语句介绍" class="headerlink" title="if选择语句介绍"></a>if选择语句介绍</h2><p>if选择语句是最简单的选择语句，是一切基于代码进行逻辑运算的基础，if语句可以在在有限的语句中选择出符合输入数据条件的相关结果，可以快速指引输入数据到达应该到达的技术区域。</p>
+<p>在之后的学习生活中，if语句的出现频率会非常之高，同时if语句在大多数环境下的普适性良好，可以应用于多种场景之中，所以if语句是否学习扎实是至关重要的。</p>
+<h2 id="if语句详解"><a href="#if语句详解" class="headerlink" title="if语句详解"></a>if语句详解</h2><p><img src="C:\Users\86181\Desktop\image-20210325193147030.png" alt="image-20210325193147030"></p>
+<p>基本语法为：</p>
+<p>if（布尔表达式（判断条件，当条件符合括号内时即可进行大括号中的操作，不然直接跳出））</p>
+<p>{</p>
+<p>​                                               在符合判断之后会实现的编程语句</p>
+<p>}</p>
+<p>如：</p>
+<pre class="line-numbers language-none"><code class="language-none">public class ifDemo02 {
+    public static void main(String[] args) {
+        int i=40;（设立初值）
+        int j=40;（设立初值）
+        if (i==j（判断是否相等）){
+            i=100;（重新赋值）
+            j=50;（重新赋值）
+        }
+        System.out.println(i);（输出最后的结果）
+        System.out.println(j);（输出最后的结果）
+    }
+}
+输出：
 
-<p><img src="C:\Users\86181\Desktop\专业学习资料即作业\java学习\java图片\数据类型\image-20210318200927021.png" alt="image-20210318200927021"></p>
-<p>在目前IDEA的开发环境中，作为“名字”使用的标识符，即使是基于中文也是可以进行相关的识别与使用的，但这里并不建议直接使用中文作为相关的标识符，因为由于在以后的Java使用中，避免不了与他人的相关文件的传输，你电脑上可以识别的中文有可能到别人机器上就是一串乱码，兼容性并不强，还有，直接使用中文或许会体现你的家国情怀和它的确通俗易懂，但是吧，总觉得有那么一点low。。。</p>
-<p>平常玩一下搞点事什么的还是可以的jpg</p>
-<p><strong>所有的标识符都只能用“A-Z”“a—z”“$“”_“四种类型作为开头字母，否则会报错</strong>（中文什么的自己搞着玩就行，别真的搞到台面上去，挺丢人的啦啦啦）；</p>
-<p><strong>首字母之后可以是任意字母，任何组合，甚至可以是阿拉伯数字</strong>（较高的自由性，但是也具有挺多的限制性）；</p>
-<p><strong>但是类似于”#“之类的具有特殊意义的符号无论作为首字母还是后续字母都会进行报错，需要注意</strong>（部分特殊文字具有一部分的冲突性，这些在之后的相关学习生活中会更加体验到某些“特殊文字”的特殊性）；</p>
-<p><strong>不能使用关键字作为变量名或者是方法名，比如”class“”double””static”；</strong></p>
-<p><strong>标识符是大小写敏感的</strong>（“A”开始的和“a”开始的标识符，即使后续的相关文字什么的完全相同，也会成为两种完全不同的变量名，代表着两种完全不同的变量）</p>
-<hr>
-<h2 id="数据类型详解"><a href="#数据类型详解" class="headerlink" title="数据类型详解"></a>数据类型详解</h2><p><img src="C:\Users\86181\Desktop\专业学习资料即作业\java学习\java图片\数据类型\image-20210322192807259.png" alt="image-20210322192807259"></p>
-<h3 id="基本数据类型（可看上图）"><a href="#基本数据类型（可看上图）" class="headerlink" title="基本数据类型（可看上图）"></a>基本数据类型（可看上图）</h3><p>数值类型就只能填写数值，不能写中文或者绝大多数的英语单词</p>
-<p>字符类型几乎可以输入所有的非敏感字符，但只能以字符型输出</p>
-<p>Boolean类型只有两种，分别是ture和false</p>
-<p>char（’   ‘）只能输入一个字符，string(‘’   ‘’)才是字符串</p>
-<p>IDEA这款软件比较完善，如果输入的相关数值超出了已有数据类型的相关表示范围，它会告知你应当设定哪种合适的基本数据类型，在不知道或者遗忘了数据类型的表示范围时，可以先输入一个大概的数值，然后跟着软件的指引更改选择正确的基本数据类型</p>
-<p><em><strong>数值类型</strong></em></p>
-<p><strong>整数类型</strong></p>
-<p>byte占1个字节范围;-128-127</p>
-<p>short占2个字节范围:-32768-32767</p>
-<p>int占4个字节范围:-2147483648-2147483647</p>
-<p>long占8个字节范围:-9223372036854775808-9223372036854775807</p>
-<p><strong>浮点类型</strong></p>
-<p>float占4个字节范围</p>
-<p>double占8个字节范围</p>
-<p><strong>字符类型</strong></p>
-<p>char占2个字节</p>
-<p><strong>boolean类型</strong></p>
-<p>占一位（<strong>仅仅只有ture和false两种类型</strong>）</p>
-<h3 id="不需要真的去记它们具体的相关储存范围，可以在IDEA中输入它们首字母大写的的数据类型名，如byte写作Byte，然后利用ctrl-鼠标点击类名进行相关的数值查看，但这种操作的基本是你必须要记住也至少要记住这8大基础类型的英文名称"><a href="#不需要真的去记它们具体的相关储存范围，可以在IDEA中输入它们首字母大写的的数据类型名，如byte写作Byte，然后利用ctrl-鼠标点击类名进行相关的数值查看，但这种操作的基本是你必须要记住也至少要记住这8大基础类型的英文名称" class="headerlink" title="不需要真的去记它们具体的相关储存范围，可以在IDEA中输入它们首字母大写的的数据类型名，如byte写作Byte，然后利用ctrl+鼠标点击类名进行相关的数值查看，但这种操作的基本是你必须要记住也至少要记住这8大基础类型的英文名称"></a>不需要真的去记它们具体的相关储存范围，可以在IDEA中输入它们首字母大写的的数据类型名，如byte写作Byte，然后利用ctrl+鼠标点击类名进行相关的数值查看，但这种操作的基本是你必须要记住也至少要记住这8大基础类型的英文名称</h3><h3 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h3><p>类，接口，数组</p>
-<h3 id="强类型语言与弱类型语言"><a href="#强类型语言与弱类型语言" class="headerlink" title="强类型语言与弱类型语言"></a>强类型语言与弱类型语言</h3><p><strong>强类型语言</strong>：要求变量的使用要严格符合相关的规定，所有的变量必须在定义后才可以开始使用，定义之后变量就以该类型的数据类型进行运算，前提是不进行相关的强制转换</p>
-<p><strong>弱类型语言</strong>：某一个变量被定义为一种类型之后，该变量可以根据环境变化自动进行转换</p>
-<hr>
-<h2 id="什么是字节"><a href="#什么是字节" class="headerlink" title="什么是字节"></a>什么是字节</h2><p><img src="C:\Users\86181\Desktop\专业学习资料即作业\java学习\java图片\数据类型\image-20210322195855977.png" alt="image-20210322195855977">1bit表示1位，<br>1Byte表示一个字节1B=8b。1024B=1KB<br>1024KB=1M1024M=1G.</p>
-<hr>
-<h2 id="数据类型拓展"><a href="#数据类型拓展" class="headerlink" title="数据类型拓展"></a>数据类型拓展</h2><h3 id="float相关拓展"><a href="#float相关拓展" class="headerlink" title="float相关拓展"></a>float相关拓展</h3><p>float在Java中具有极为奇妙的相关性质，<strong>它是有限，离散，接近但不等于的，所以一定要避免直接使用浮点数进行相关的比较！！！</strong></p>
-<p>Java中有一个已经准备好了的类叫做Bigdecimal，到时候可以使用它来达到相关的比较作用</p>
-<h3 id="char相关拓展"><a href="#char相关拓展" class="headerlink" title="char相关拓展"></a>char相关拓展</h3><p><img src="C:\Users\86181\Desktop\专业学习资料即作业\java学习\java图片\数据类型\image-20210322201352686.png" alt="image-20210322201352686"></p>
-<p>所有的字符本质还是数字（Unicode可以将字符转换为数字，根据相关的编码表进行输出）</p>
-<p>‘a’=65,’A’=97;</p>
-<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>\t:空格（制表符）</p>
-<p>\n:换行</p>
-<p>\0：空字符(NULL)</p>
-<p>\a ：响铃(BEL) </p>
-<p>\ddd： 任意字符 三位八进制</p>
-<p>\xhh ：任意字符 二位十六进制</p>
-<h3 id="if语句小知识"><a href="#if语句小知识" class="headerlink" title="if语句小知识"></a>if语句小知识</h3><p>if（flag==ture）=if（flag）</p>
-<p>if（flag）相当于默认为判断是ture</p>
-<hr>
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p>java是<strong>强类型语言</strong>，要求变量的使用要严格符合相关的规定，如果发现已经规定的数据类型无法承载相关的数字，那么就需要强制转换相关的数据类型了，<strong>但强制转换可能引起溢出或者精确度发生改变等问题</strong>（一般情况下出现在小数中）</p>
-<p><img src="C:\Users\86181\Desktop\专业学习资料即作业\java学习\java图片\数据类型\image-20210322203113982.png" alt="image-20210322203113982"></p>
-<p><img src="C:\Users\86181\Desktop\专业学习资料即作业\java学习\java图片\数据类型\image-20210322203520195.png" alt="image-20210322203520195"></p>
+100（值已经改变）
+50（值已经改变）
 
+Process finished with exit code 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="if语句的多选择结构"><a href="#if语句的多选择结构" class="headerlink" title="if语句的多选择结构"></a>if语句的多选择结构</h2><p>有前面的铺垫之后，我们或许会有疑问如果存在多种可能的时候又该怎么办呢？</p>
+<p>此时，就应当由if语句的多选择结构来为我们排忧解难了。</p>
+<p>法如其名，多选择结构就是让if语句可以存在多种解的情况下同时拥有处理多个问题的能力，它会在已经规划好的多个选择中自动锁定最符合条件的方案，并利用该方案进行最终的加工和求解。</p>
+<p>基本语法为：</p>
+<p>if（）{</p>
+<p>}</p>
+<p>else if（）{</p>
+<p>}</p>
+<p>else if（）{</p>
+<p>}</p>
+<p>else if（）{</p>
+<p>}</p>
+<p>else{</p>
+<p>}</p>
+<p>如：</p>
+<pre class="line-numbers language-none"><code class="language-none">package study.scanner;
+
+import java.util.Scanner;
+
+public class ifDemo01 {
+    public static void main(String[] args) {
+        Scanner scanner =new Scanner(System.in);
+        System.out.println("请输入你的成绩");
+        double score=scanner.nextDouble();
+        if (score==100){
+            System.out.println("恭喜你满分");
+        }else if (score&gt;=95){
+            System.out.println("S级");
+        }else if (score&gt;=90){
+            System.out.println("A级");
+        }else if (score&gt;=80){
+            System.out.println("B级");
+        }else if (score&gt;=70){
+            System.out.println("C级");
+        }else if (score&gt;=60){
+            System.out.println("D级");
+        }
+        else System.out.println("不及格");
+        scanner.close();
+
+        /*
+        if语句至多有1 个else 语句，else 语句在所有的else if 语句之后。
+        if语句可以有若干个else if语句，它们必须在else语句之前。
+        一旦其中一个else if语句检测为true，其他的else if 以及else语句都将跳过执行。
+        */
+
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>值得注意的是：</p>
+<p>​         if语句至多有1 个else 语句，else 语句在所有的else if 语句之后。<br>​        订f语句可以有若干个else if语句，它们必须在else语句之前。<br>​        一旦其中一个else if语句检测为true，其他的else if 以及else语句都将跳过执行。</p>
+<h3 id="if语句的嵌套"><a href="#if语句的嵌套" class="headerlink" title="if语句的嵌套"></a>if语句的嵌套</h3><p>相当于在一份if语句中加入额外的if语句，实现多级过滤的作用，if嵌套中的if语句写法与之前的一模一样</p>
+<p>如：</p>
+<pre class="line-numbers language-none"><code class="language-none">package study.scanner;
+
+import java.util.Scanner;
+
+public class ifDemo03 {
+    public static void main(String[] args) {
+        Scanner scanner =new Scanner(System.in);
+        System.out.println("输入一个数字以寻找它所代表的信息编码");
+        System.out.println("必须在零到五之间");
+        int score= scanner.nextInt();
+        if (score&gt;=0&amp;&amp;score&lt;=5){
+            if (score&gt;=0&amp;&amp;score&lt;3){
+                if (score==0){
+                    System.out.println("编号5");
+                }
+                if (score==1){
+                    System.out.println("编号6");
+                }
+                if (score==2){
+                    System.out.println("编号2");
+                }
+            }
+            if (score&gt;=3&amp;&amp;score&lt;=5){
+                if (score==3){
+                    System.out.println("编号9");
+                }
+                if (score==4){
+                    System.out.println("编号100");
+                }
+                if (score==5){
+                    System.out.println("编号33");
+                }
+            }
+        }
+        else {
+            System.out.println("未找到既定编号，超出查找范围");
+        }
+    }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -581,7 +631,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/12/01/%E7%8B%82%E7%A5%9E%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%88%9D%E5%85%A5Java%E4%B8%96%E7%95%8C/">http://example.com/2021/12/01/%E7%8B%82%E7%A5%9E%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%88%9D%E5%85%A5Java%E4%B8%96%E7%95%8C/</a>
+                    <a href="http://example.com/2021/12/01/if%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/">http://example.com/2021/12/01/if%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -800,7 +850,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/12/01/if%E9%80%89%E6%8B%A9%E8%AF%AD%E5%8F%A5/">
+                <a href="/2021/12/01/java%E7%9A%84%E7%89%B9%E6%80%A7%E4%B8%8E%E4%BC%98%E5%8A%BF%E5%8F%8Ajava%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%88%E6%9C%AC/">
                     <div class="card-image">
                         
                         
@@ -853,13 +903,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/01/switch%E5%A4%9A%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84/">
+                <a href="/2021/12/01/%E7%8B%82%E7%A5%9E%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E5%88%9D%E5%85%A5Java%E4%B8%96%E7%95%8C/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="IDEA安装">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="狂神笔记——初入Java世界">
                         
-                        <span class="card-title">IDEA安装</span>
+                        <span class="card-title">狂神笔记——初入Java世界</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
